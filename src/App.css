@@ -48,8 +48,9 @@
 .BA-pic img {
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(112, 111, 111, 0.192);
-  width:80%;
+  width:280px;
   height:80%;
+ 
 }
 
 .BA-pic-box{
@@ -66,9 +67,9 @@
   background-color:rgb(255, 207, 214);
   text-align: center;
   flex:1;
-  color: rgb(255, 255, 255);
+  color: rgb(73, 73, 73);
   padding:50px;
-  font-size:clamp(15px , 4.5vw, 44px);
+  font-size:clamp(15px , 4.5vw, 29px);
 }
 
 .desc h2{
@@ -247,7 +248,7 @@
     width: 100%;
   }
   .desc{
-    padding:40px 5px;
+    padding:5px 5px 80px 5px;
     margin: 0;
     
   }
@@ -259,5 +260,9 @@
   }
   .BA-pic{
     padding-bottom: 30px;
+  }
+  .BA-pic img{
+    
+    width: 99%;
   }
 }
