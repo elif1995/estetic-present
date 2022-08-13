@@ -67,7 +67,7 @@
   flex:1;
   color: rgb(255, 255, 255);
   padding:50px;
-  
+  font-size:clamp(15px , 4.5vw, 44px);
 }
 
 .desc h2{
@@ -156,7 +156,7 @@
 
 .submit-button{
   background-color:rgb(248, 96, 96);
-  padding:12px 50px;
+  padding:12px 40px;
   border-radius:10px;
   border:none;
   box-shadow:5px 5px 10px rgba(198, 198, 198, 0.204);
@@ -166,6 +166,7 @@
   cursor: pointer;
   text-align:center;
   margin-top: 8px;
+  width: 100%;
 }
 
 .contact-options{
@@ -236,5 +237,20 @@
   }
   .BA-pic{
     overflow: hidden
+  }
+  .contact-details form{
+    width: 100%;
+  }
+  .contact-details input{
+    width: 100%;
+  }
+  .desc{
+    padding:40px 5px;
+    margin: 0;
+    
+  }
+  .desc h2{
+    width: 100%;
+    margin:0
   }
 }
