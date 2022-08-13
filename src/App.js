@@ -1,10 +1,13 @@
 
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
     <div className="App">
-      <div className="navbar"><h2  > ד"ר יוליה פרנקין  </h2><img src="http://yuliafrenkin.co.il/wp-content/uploads/2018/06/ulia-small-logo.png" /></div>
+      <div className="navbar"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img  src="http://yuliafrenkin.co.il/wp-content/uploads/2018/06/ulia-small-logo.png" /></a></div>
       
       <div className="BA-pic">
         
@@ -39,7 +42,12 @@ function App() {
       </div>
       </div>
       </div>
-
+      <div className="contact-options">
+        <div className="contact-option fa-2x"><a href="https://wa.me/544854747"><FontAwesomeIcon icon={faWhatsapp}></FontAwesomeIcon></a></div>
+        <div className="contact-option fa-2x" id="contact-facebook"><a href="https://www.facebook.com/DrFrenkinYulia"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a></div>
+        <div className="contact-option fa-2x"><a href="tel:08-9353339"><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon></a></div>
+      </div>
+      
     </div>
   );
 }
