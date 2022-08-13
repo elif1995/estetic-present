@@ -3,17 +3,20 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import logo from './img/ulia-small-logo(1).png';
+import befor from './img/befor.jpg';
+import after from './img/after.jpg'
 
 function App() {
   return (
     <div className="App">
-      <div className="navbar"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img  src="http://yuliafrenkin.co.il/wp-content/uploads/2018/06/ulia-small-logo.png" /></a></div>
+      <div className="navbar"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img  src={logo} /></a></div>
       
       <div className="BA-pic">
         
-        <div className="BA-pic-box"><h2>לפני</h2><img  height={150} width={250} src="http://yuliafrenkin.co.il/wp-content/uploads/2022/07/3.jpg"/></div>
+        <div className="BA-pic-box"><h2>לפני</h2><img  height={150} width={250} src={befor}/></div>
         
-        <div className="BA-pic-box"><h2>אחרי</h2><img  height={150} width={250} src="http://yuliafrenkin.co.il/wp-content/uploads/2022/07/4.jpg"/></div>
+        <div className="BA-pic-box"><h2>אחרי</h2><img  height={150} width={250} src={after}/></div>
         
         <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFCFD6" fill-opacity="1" d="M0,128L48,112C96,96,192,64,288,48C384,32,480,32,576,80C672,128,768,224,864,261.3C960,299,1056,277,1152,250.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
       </div>
