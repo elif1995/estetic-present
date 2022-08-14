@@ -10,7 +10,7 @@ import after from './img/after.jpg'
 function App() {
   return (
     <div className="App">
-      <div className="navbar"><div className="navbar-top-inner"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img  src={logo} /></a></div><div className="sub-navbar-title"><p>המרכז לאסתטיקה</p><p>שאול טשרניחובסקי 67,רחובות</p></div></div>
+      <div className="navbar"><div className="navbar-top-inner"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img  src={logo} /></a></div><div className="sub-navbar-title"><p> מרכז לרפואה אסתטית</p><p>שאול טשרניחובסקי 67,רחובות</p></div></div>
         <div className='title'>
           <h2  style={{color: 'black'}}>הרמת עפעפיים ללא ניתוח</h2>
         </div>
