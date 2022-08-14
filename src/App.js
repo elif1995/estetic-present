@@ -21,13 +21,13 @@ function App() {
         <div className="BA-pic-box"><h3>אחרי</h3><img  id="imgAfter"  src={after}/></div>
         
       </div>
-      <h1 className="desc"> <br/>מכשיר ה-Plexer Plus, עושה סוף לעפעפיים נפולים, ללא ניתוח.
-      אנשים רבים סובלים מתופעת עודפי עור מעל לעפעפיים, מה שמקנה לפנים מראה מבוגר ועייף. רבים נמנעים מביצוע ניתוח בעפעפיים, בעיקר מתוך פחד מהרדמה ומסיבוכים אפשריים, שיכולים להתרחש בניתוח רגיל.
-      </h1>
 
       
       
       <div className="contact">
+      <h1 className="desc"> <br/>מכשיר ה-Plexer Plus, עושה סוף לעפעפיים נפולים, ללא ניתוח.
+      אנשים רבים סובלים מתופעת עודפי עור מעל לעפעפיים, מה שמקנה לפנים מראה מבוגר ועייף. רבים נמנעים מביצוע ניתוח בעפעפיים, בעיקר מתוך פחד מהרדמה ומסיבוכים אפשריים, שיכולים להתרחש בניתוח רגיל.
+      </h1>
       <div className="inner-contact">
       <div className="contact-background">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6420761592963!2d34.80800018491138!3d31.88914768124909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b7118cb168b1%3A0x45ae702297973fa1!2z16nXkNeV15wg15jXqdeo16DXmdeX15XXkdeh16fXmSA2Nywg16jXl9eV15HXldeq!5e0!3m2!1siw!2sil!4v1658873741712!5m2!1siw!2sil" width={300} height={300} style={{border:"0",width:"100%", height:"100%",padding:"5px",opacity:'0.8',}}  ></iframe>

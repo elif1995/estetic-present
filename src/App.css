@@ -124,10 +124,10 @@
   background-color:rgb(255, 207, 214);
   text-align: center;
   flex:1;
-  color: rgb(73, 73, 73);
+  color: white;
   padding:50px;
   font-size:clamp(15px , 4.5vw, 29px);
-  text-shadow: 2px 2px #ffffff7c;
+  text-shadow: 2px 2px #43434394;
   z-index: 99;
 }
 
@@ -229,6 +229,11 @@
   text-align:center;
   margin-top: 8px;
   width: 100%;
+}
+.submit-button:hover{
+  background-color:red;
+  transform:scale(1.05);
+  transition:0.1s
 }
 
 .contact-options{
