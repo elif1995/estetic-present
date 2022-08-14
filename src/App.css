@@ -238,7 +238,7 @@
   background-color:rgb(32, 32, 32);
   position:sticky;
   bottom: 0;
-  z-index: 100;
+  z-index: 1200;
 }
 
 .contact-option a{
