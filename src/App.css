@@ -8,20 +8,28 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 99;
+  
 }
 
 .App{
   font-family: 'Open Sans', sans-serif;
   direction: rtl;
   height: 100vh;
-  background-color:rgb(255, 207, 214);
+  background-color:rgb(255, 255, 255);
   
 }
 
 .navbar{
   width: 100%;
-  height:15vh;
+  height:20vh;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.navbar-top-inner{
   background-color:white;
   position: relative;
   display: flex;
@@ -29,19 +37,37 @@
   align-items:center;
   
   z-index: 100;
+
 }
-.navbar h2{
+.navbar-top-inner h2{
   font-size:clamp(15px, 8vw, 25px);
 }
 
-.navbar h2::before{
-  position: absolute;
-  bottom: 0px;
-  content: " מרכז לרפואה אסתטית, שאול טשרניחובסקי 67, רחובות";
-  font-size:12px;
-  transform: translateX(16px);
-  border-radius:50px;
-  padding:3px
+.sub-navbar-title{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+
+.title{
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px;
+  background-color:transparent
+}
+
+.title h2{
+  background:linear-gradient(90deg, rgb(253, 236, 238) 5%, rgb(253, 242, 243) 12%, rgba(255,255,255,1) 65%, rgb(253, 236, 238) 95%);;
+  border-radius:12%;
+  box-shadow: 2px 2px 10px rgba(177, 176, 176, 0.208);
+  font-weight:400;
+  font-size:clamp(25px , 4.5vw, 40px);
+  
+  padding:20px
 }
 
 .BA-pic{
@@ -55,8 +81,8 @@
   /* flex-wrap: wrap; */
   /* box-shadow: 2px 15px 10px rgba(172, 172, 172, 0.116); */
   padding-bottom: 100px;
-   background:linear-gradient(250deg, rgb(252, 242, 244) 2%, rgb(252, 244, 244) 5%, rgba(255,255,255,1) 70%, rgb(250, 244, 244) 99%);;
-  padding-top:60px;
+   /* background:linear-gradient(250deg, rgb(252, 242, 244) 2%, rgb(252, 244, 244) 5%, rgba(255,255,255,1) 70%, rgb(250, 244, 244) 99%);; */
+  padding-top:40px;
 }
 
 
@@ -70,10 +96,15 @@
   
 }
 
-.BA-pic img:hover{
-  transform: scale(1.2) ;
+#imgBefore:hover{
+  transform: scale(1.45)  ;
   transition: 0.2s;
   
+}
+#imgAfter:hover{
+  transform: scale(1.45)  ;
+  transition: 0.2s;
+
 }
 
 
@@ -144,7 +175,7 @@
 
 .contact-details{
   flex: 1;
-  
+  padding: 5px;
   color:white;
   display: flex;
   justify-content: space-around;
@@ -296,4 +327,18 @@
     
     width: 99%;
   }
+}
+@media screen and (max-height:720px){
+  .navbar{
+    padding-top: 8vh;
+    flex-direction:column
+  }
+  
+}
+@media screen and (max-height:420px){
+  .navbar{
+    height:45vh;
+    flex-direction:column
+  }
+  
 }
