@@ -4,6 +4,48 @@
   padding: 0;
 }
 
+.success-message{
+  padding: 10px 15px;
+  font-weight: bold;
+  display: flex;
+  right: 50%;
+  transform: translateX(50%);
+  justify-content:center;
+  align-items: center;
+  width: 250px;
+  background-color:white;
+  position:fixed;
+  top:-45px;
+  box-shadow: 2px 2px 5px rgba(92, 92, 92, 0.501);
+  z-index: 5000;
+  border-radius: 5px;
+  animation: successShow 4s  infinite;
+  animation-iteration-count: 1
+}
+
+@keyframes successShow {
+    0%{
+      transform: translateY(10px) translateX(50%)
+    }
+    10%{
+      transform: translateY(60px) translateX(50%)
+    }
+    25%{
+      transform: translateY(60px) translateX(50%)
+    }
+    50%{
+      transform: translateY(60px) translateX(50%)
+    }
+    75%{
+      transform: translateY(0px) translateX(50%)
+    }
+    100%{
+      transform: translateY(-45px) translateX(50%)
+    }
+}
+
+
+
 .wave{
   position: absolute;
   bottom: 0;
@@ -80,7 +122,7 @@
   align-items: center;
   /* flex-wrap: wrap; */
   /* box-shadow: 2px 15px 10px rgba(172, 172, 172, 0.116); */
-  padding-bottom: 80px;
+  padding-bottom: 10px;
    /* background:linear-gradient(250deg, rgb(252, 242, 244) 2%, rgb(252, 244, 244) 5%, rgba(255,255,255,1) 70%, rgb(250, 244, 244) 99%);; */
   padding-top:5px;
   
@@ -98,12 +140,12 @@
 }
 
 #imgBefore:hover{
-  transform: scale(1.20)  ;
+  transform: scale(1.30)  ;
   transition: 0.2s;
   
 }
 #imgAfter:hover{
-  transform: scale(1.35)  ;
+  transform: scale(1.30)  ;
   transition: 0.2s;
 
 }
@@ -127,7 +169,9 @@
   color: white;
   padding:50px;
   font-size:clamp(15px , 4.5vw, 29px);
-  text-shadow: 2px 2px #43434394;
+  text-shadow: 2px 2px 2px rgba(70, 70, 70, 0.315),
+                 4px 4px 8px rgba(249, 52, 52, 0.412),
+                 8px 8px 16px rgba(253, 197, 197, 0.373);
   z-index: 99;
 }
 
@@ -147,6 +191,7 @@
   display: flex;
   flex-direction: row;
   padding: 50px;
+  padding-top: 80px;
   background-color:rgb(255, 207, 214);
 }
 
@@ -328,7 +373,7 @@
   
   }
   .BA-pic{
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
   .BA-pic img{
     

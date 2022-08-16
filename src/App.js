@@ -1,21 +1,47 @@
 
+import {useState} from 'react';
+import { fadeIn } from 'react-animations'
 import './App.css';
+import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck, faPhone, faSquareCheck } from '@fortawesome/free-solid-svg-icons';
+
 import logo from './img/ulia-small-logo(1).png';
 import befor from './img/befor.jpg';
 import after from './img/after.jpg'
 
 function App() {
+
+  const [success, setSuccess] = useState(false)
+
+  function sendEmail(e){
+    e.preventDefault();
+
+    emailjs.sendForm('service_fd9ezvm', 'template_lkkiriq', e.target, 'user_mCywm2gmcbJZQ0pcCu0JY')
+      .then((result) => {
+          console.log(result.text);
+          setSuccess(true)
+      }, (error) => {
+          console.log(error.text);
+          setSuccess(false);
+      });
+      
+      e.target.reset();
+  }
+
+
+
   return (
     <div className="App">
+      { success && <div className='success-message'><p > הודעה נשלחה בהצלחה <FontAwesomeIcon style={{color: 'green',marginRight: '10px'}}icon={faCircleCheck}></FontAwesomeIcon></p></div>}
       <div className="navbar"><div className="navbar-top-inner"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img  src={logo} /></a></div><div className="sub-navbar-title"><p> מרכז לרפואה אסתטית</p><p>שאול טשרניחובסקי 67,רחובות</p></div></div>
         <div className='title'>
           <h2  style={{color: 'black'}}>הרמת עפעפיים ללא ניתוח</h2>
         </div>
-      <div className="BA-pic">
+      <div className="BA-pic" >
         <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFCFD6" fill-opacity="1" d="M0,128L48,112C96,96,192,64,288,48C384,32,480,32,576,80C672,128,768,224,864,261.3C960,299,1056,277,1152,250.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        
         <div className="BA-pic-box"><h3>לפני</h3><img id="imgBefore"  src={befor}/></div>
         
         <div className="BA-pic-box"><h3>אחרי</h3><img  id="imgAfter"  src={after}/></div>
@@ -35,11 +61,11 @@ function App() {
       <div className="contact-details" id='contact'>
         <h1>השאר/י פרטים ונחזור אלייך</h1>
         
-        <form >
+        <form onSubmit={sendEmail}>
           <h3 >שם</h3>
-          <input/>
+          <input type="text" name="name" required/>
           <h3>טלפון</h3>
-          <input/>
+          <input type="phone" name="phone" required/>
           <button type="submit" className="submit-button">שלח</button>
         </form>
         
