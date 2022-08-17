@@ -4,8 +4,8 @@ import {useState} from 'react';
 import './App.css';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faCircleCheck, faPhone, faSquareCheck } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook ,faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faCircleCheck, faPhone} from '@fortawesome/free-solid-svg-icons';
 
 import logo from './img/ulia-small-logo(1).png';
 import befor from './img/befor.jpg';
@@ -16,7 +16,7 @@ function App() {
   const [success, setSuccess] = useState(false)
 
   function sendEmail(e){
-    
+    e.preventDefault();
 
     emailjs.sendForm('service_fd9ezvm', 'template_lkkiriq', e.target, 'user_mCywm2gmcbJZQ0pcCu0JY')
       .then((result) => {
@@ -28,6 +28,8 @@ function App() {
       });
       
       e.target.reset();
+      setTimeout(setSuccess(false),4000)
+      
   }
 
 
@@ -35,7 +37,7 @@ function App() {
   return (
     <div className="App">
       { success && <div className='success-message'><p > הודעה נשלחה בהצלחה <FontAwesomeIcon style={{color: 'green',marginRight: '10px'}}icon={faCircleCheck}></FontAwesomeIcon></p></div>}
-      <div className="navbar"><div className="navbar-top-inner"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img  src={logo} /></a></div><div className="sub-navbar-title"><p> מרכז לרפואה אסתטית</p><p>שאול טשרניחובסקי 67,רחובות</p></div></div>
+      <div className="navbar"><div className="navbar-top-inner"><h2 style={{ marginLeft: '5px'}} > ד"ר יוליה פרנקין  </h2><a href="http://yuliafrenkin.co.il/"><img alt='logo' src={logo} /></a></div><div className="sub-navbar-title"><p> מרכז לרפואה אסתטית</p><p>שאול טשרניחובסקי 67,רחובות</p></div></div>
         <div className='title'>
           <h2  style={{color: 'black'}}>הרמת עפעפיים ללא ניתוח</h2>
         </div>
@@ -44,11 +46,11 @@ function App() {
         
          
         <div className="BA-pic-box">
-          <h3>לפני</h3><img id="imgBefore"  src={befor}/>
+          <h3>לפני</h3><img id="imgBefore" alt="befor img" src={befor}/>
         </div>
         
         <div className="BA-pic-box">
-          <h3>אחרי</h3><img  id="imgAfter"  src={after}/>
+          <h3>אחרי</h3><img  id="imgAfter" alt="after img"  src={after}/>
         </div>
         
       </div>
@@ -63,7 +65,7 @@ function App() {
       
       <div className="inner-contact">
       <div className="contact-background">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6420761592963!2d34.80800018491138!3d31.88914768124909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b7118cb168b1%3A0x45ae702297973fa1!2z16nXkNeV15wg15jXqdeo16DXmdeX15XXkdeh16fXmSA2Nywg16jXl9eV15HXldeq!5e0!3m2!1siw!2sil!4v1658873741712!5m2!1siw!2sil" width={300} height={300} style={{border:"0",width:"100%", height:"100%",padding:"5px",opacity:'0.8',}}  ></iframe>
+        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.6420761592963!2d34.80800018491138!3d31.88914768124909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b7118cb168b1%3A0x45ae702297973fa1!2z16nXkNeV15wg15jXqdeo16DXmdeX15XXkdeh16fXmSA2Nywg16jXl9eV15HXldeq!5e0!3m2!1siw!2sil!4v1658873741712!5m2!1siw!2sil" width={300} height={300} style={{border:"0",width:"100%", height:"100%",padding:"5px",opacity:'0.8',}}  ></iframe>
       </div>
       <div className="contact-details" id='contact'>
         <h1>השאר/י פרטים ונחזור אלייך</h1>
