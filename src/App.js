@@ -84,7 +84,7 @@ function App() {
       
       <div className="contact-options">
         
-        <div className="contact-option fa-2x"><a href="https://wa.me/544854747"><FontAwesomeIcon icon={faWhatsapp}></FontAwesomeIcon></a></div>
+        <div className="contact-option fa-2x"><a href="https://wa.me/549353342"><FontAwesomeIcon icon={faWhatsapp}></FontAwesomeIcon></a></div>
         <div className="contact-option fa-2x" id="contact-facebook"><a href="https://www.facebook.com/DrFrenkinYulia"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a></div>
         <div className="contact-option fa-2x"><a href="tel:08-9353339"><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon></a></div>
       </div>
